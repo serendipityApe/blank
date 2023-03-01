@@ -1,0 +1,12 @@
+{
+  "name": "dCDN",
+  "version": "1.0.0",
+  "description": "get cdn by dependency",
+  "main": "index.js",
+  "repository": "https://github.com/serendipityApe/blank.git",
+  "author": "王乐源 <1577142422@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "vercel-build": "node ./build.js"
+  }
+}
