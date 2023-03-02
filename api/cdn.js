@@ -1,4 +1,4 @@
 module.exports = (req, res) => {
-    res.send(`
-      just a test api`);
+    
+    res.send(req.toString());
   };
