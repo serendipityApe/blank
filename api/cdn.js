@@ -6,8 +6,8 @@ const jsDelivr = axios.create({
 });
 module.exports = async (req, res) => {
   //React@18.2.0
-  const { dependecy } = req?.query;
-  if (!dependecy.test(/\w+@\d+/))
+  const { dependency } = req?.query;
+  if (!(/\w+@\d+/).test(dependency))
     return res.json({
       message: "invalid params",
     });
@@ -15,8 +15,8 @@ module.exports = async (req, res) => {
     data: {
       entrypoints: { file: entrypoint },
     },
-  } = jsDelivr.get(`/v1/packages/npm/${dependecy}/entrypoints`);
-//   const data = await jsDelivr.get(`/v1/packages/npm/${dependecy}`);
-  res.send(`https://cdn.jsdelivr.net/npm/${dependecy}/${entrypoint}`);
-  res.send(dependecy);
+  } = jsDelivr.get(`/v1/packages/npm/${dependency}/entrypoints`);
+//   const data = await jsDelivr.get(`/v1/packages/npm/${dependency}`);
+  res.send(`https://cdn.jsdelivr.net/npm/${dependency}/${entrypoint}`)
+  res.send(dependency);
 };
