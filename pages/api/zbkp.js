@@ -1,7 +1,7 @@
 const axios = require("axios");
 const apiKey = "7SFiQ==Y9Vd5aefSZ7By61NMTjQ=";
 const zbk = axios.create({
-  baseURL: "http://api.heclouds.com/devices/1065251844/datastreams",
+  baseURL: "http://api.heclouds.com/devices/1065251844/datapoints?limit=10",
   headers: {
     "api-key": apiKey,
   },
